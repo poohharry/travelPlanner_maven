@@ -14,7 +14,7 @@ import com.travel.biz.member.MemberService;
 import com.travel.biz.member.MemberVO;
 
 @Controller
-@SessionAttributes("user")
+@SessionAttributes("member")
 public class LoginController {
 	@Autowired
 	private MemberService memberService;
