@@ -8,4 +8,5 @@ public interface MemberService {
 	public List<MemberVO> getMemberList(MemberVO vo);
 	public void updateMember(MemberVO vo);
 	public void deleteMember(MemberVO vo);
+	public MemberVO login(MemberVO vo);
 }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberDAO">
+	
+	<resultMap id="memberResult" type="member">
+		<id property="seq" column="seq" />
+		<result property="id" column="id" />
+		<result property="pw" column="pw" />
+		<result property="name" column="name" />
+		<result property="email" column="email" />
+		<result property="mobile" column="mobile" />
+		<result property="signupDate" column="signupDate" />
+		<result property="proImgName" column="proImgName" />
+		<result property="proImgSize" column="proImgSize" />
+		
+	</resultMap>
+	
+	
+	<insert id="insertMember" parameterType="member">
+		<![CDATA[
+		INSERT INTO members(id, pw, name, email, mobile, proImgName, proImgSize)
+		VALUES(#{id}, #{pw}, #{name}, #{email}, #{mobile}, #{proImgName}, #proImgSize})
+		]]>
+	</insert>
+	
+	<update id="updateMember">
+		<![CDATA[
+		UPDATE members SET
+		id = #{id},
+		pw = #{pw},
+		name = #{name},
+		email = #{email},
+		mobile = #{mobile},
+		proImgName = #{proImgName},
+		proImgSize = #{proImgSize},
+		WHERE seq = #{seq}
+		]]>
+	</update>
+	
+	<select id="getMember" resultType="member">
+		<![CDATA[
+		SELECT *
+		FROM members
+		WHERE id = #{id};
+		]]>
+	</select>
+	
+	<select id="getMemberList" resultMap="memberResult">
+		<![CDATA[
+		SELECT *
+		FROM members
+		]]>
+	</select>
+	
+	<delete id="deleteBoard">
+		<![CDATA[
+		DELETE from members 
+		WHERE seq = #{seq}
+		]]>
+	</delete>
+	
+	<select id="login" resultType="member">
+		<![CDATA[
+		SELECT Id, name
+		FROM members
+		WHERE id = #{id} AND pw = #{pw};
+		]]>
+	</select>
+
+</mapper>
