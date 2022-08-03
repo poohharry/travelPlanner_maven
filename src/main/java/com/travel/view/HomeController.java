@@ -20,7 +20,7 @@ public class HomeController {
 		
 		
 		
-		return "/jsp/home.jsp";
+		return "/jsp/index.jsp";
 	}
 	
 }

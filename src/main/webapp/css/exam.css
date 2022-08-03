@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    text-decoration: none;
+}
+/* 시험 페이지 헤더 */
+
+
+header{
+    height: 55px;
+    width: 100%;
+    background: #f8f9fa;
+    color: black;
+    align-items: center;
+}
+
+.headerWrap{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 55px;
+}
+
+.lectureName{
+	font-size: xx-large;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* 시험페이지 메인 */
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.examMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.examBtn{
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.arrowLeft,
+.arrowRight,
+ion-icon{
+    width: 5vw;
+    height: 8vh;
+    cursor: pointer;
+}
+
+.arrowLeft:active,
+.arrowRight:active{
+  position: relative;
+  top:4px;
+}
+
+.timer{
+	font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+}
+
+.examWrap,
+.examQuestions{
+	width: 60rem;
+    height: 40rem;
+}
+
+.examTitle{
+	width: 30rem;
+    margin: 5rem auto;
+}
+.btns{
+	font-size: 1.5rem;
+    letter-spacing: 2px;
+    align-items: baseline;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"]{
+	width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.Item{
+	margin-right:2rem;
+}

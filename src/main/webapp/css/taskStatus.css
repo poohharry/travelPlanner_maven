@@ -1,0 +1,96 @@
+main{
+    width: 90rem;
+    height: 40rem;
+    margin: 50px auto;
+}
+
+.filter{
+   margin-bottom: 1rem;
+}
+
+.tableWrap{
+    width: 80rem;
+    padding: 10px;
+}
+
+table{
+    margin-left: 100px;
+    table-layout: fixed;
+    word-break: break-all;
+    text-align: center;
+    width: 70rem;
+}
+
+.tableWrap2{
+    margin-bottom: 5rem;
+    height: 40rem;
+}
+
+tr{
+    padding: 30px;
+}
+
+th, td{
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+table a:hover{
+    color: red;
+}
+
+
+.inputTitle{
+    padding: 5px;
+    margin: 30px auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    border: 1px solid lightgray;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.sendBtn,
+.listBtn{
+    margin: 2vh 2vh;
+}
+
+
+
+
+@media  screen and (max-width: 1024px) {
+    .loginForm{
+        margin: 20px auto;
+    }
+
+    main{
+        width: 50rem;
+        padding: 20px 0;
+    }
+
+    .lectureTitle{
+        margin-left: 5rem;
+    }
+
+    .filterWrap{
+        width: 50rem;
+        padding: 20px 0;
+        margin: 25px 25px 25px 0px;
+    }
+
+    .tableWrap {
+        width: 50rem;
+        padding: 30px;
+    }
+
+    table{
+        margin-left: 0px;
+        width: 50rem;
+        font-size: 1rem;
+    }
+    .hide{
+        display: none;
+    }
+    .loginInfo {
+    margin-right: 0;
+    font-size:0.9rem;
+    }
+}
