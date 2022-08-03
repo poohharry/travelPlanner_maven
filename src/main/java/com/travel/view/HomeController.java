@@ -1,4 +1,4 @@
-package com.travel.home;
+package com.travel.view;
 
 import javax.servlet.http.HttpSession;
 
