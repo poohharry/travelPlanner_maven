@@ -19,7 +19,7 @@
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
    	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css">
-   	<script src="${pageContext.request.contextPath}/js/index.js"></script>
+   	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
    	
 </head>
 <body>
@@ -29,7 +29,7 @@
 	
 	<main class="form-signin">
 	  <form action="login.do" method="post" name='loginForm'>
-	    <h1 class="h3 mb-3 fw-normal" style="text-align:center;">통합로그인페이지</h1>
+	    <h1 class="h3 mb-3 fw-normal" style="text-align:center;">로그인</h1>
 	
 	    <div class="form-floating">
 	      <input type="text" name="id" class="form-control" id="floatingInput">
@@ -44,8 +44,8 @@
 	</main>
 	
 <!-- JS -->
-<script src="${pageContext.request.contextPath}/js/loading.js"></script>
-<script src="${pageContext.request.contextPath}/js/index.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script defer src="${pageContext.request.contextPath}/js/loading.js"></script>
+<script defer src="${pageContext.request.contextPath}/js/index.js"></script>
+<script defer src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 </body>
 </html>

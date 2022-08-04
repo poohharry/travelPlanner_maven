@@ -9,7 +9,7 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <span class="nav__logo">학사 종합 포털</span>
+                    <span class="nav__logo">사이드 메뉴</span>
                 </div>
                     <div class="nav__list">
                         <a href="javascript:getsStorage('clickHome', 'home.do')" id='clickHome' name='clickHome' class="nav__link">
