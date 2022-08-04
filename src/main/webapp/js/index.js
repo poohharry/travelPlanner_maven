@@ -10,8 +10,8 @@ const showMenu = (toggleId, navbarId, bodyId) => {
             navbar.classList.toggle('expander');
             bodypadding.classList.toggle('body-pd');
         });
-    };
-};
+    }
+}
 
 showMenu('nav-toggle', 'navbar', 'body-pd')
 
