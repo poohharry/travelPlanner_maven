@@ -13,7 +13,7 @@
                 <span class="nav__logo"><a href="./jsp/signUp.jsp">signUp</a></span>
             </div>
             <div class="nav__list">
-                <a href="#" id='clickHome' name='clickHome' class="nav__link">
+                <a href="home.do" id='clickHome' name='clickHome' class="nav__link">
                     <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">main</span>
                 </a>
