@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
 	<!--  부트스트랩 CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -22,7 +20,7 @@
    	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
    	
 </head>
-<body>
+<body id="body-pd">
 	
 	<!-- 사이드바 -->
 	<jsp:include page="../commonJSP/sideBar.jsp"/>
