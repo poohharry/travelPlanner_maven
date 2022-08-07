@@ -11,7 +11,7 @@ public class BoardVO {
 	private String content;				// 내용
 	private String fileName;			// 업로드 파일 이름
 	private int fileSize;				// 업로드 파일 크기
-	private String wirteDate;			// 작성 날짜
+	private String writeDate;			// 작성 날짜
 	private String updateDate;			// 수정 날짜
 	private String originalFileName;	// 수정 시 기존 업로드 파일 이름
 	

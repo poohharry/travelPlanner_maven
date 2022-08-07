@@ -48,10 +48,6 @@
                     <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">planner</span>
                 </a>
-                <a href="#" id='clickMyInfo' name='clickMyInfo' class="nav__link">
-                    <ion-icon name="ellipsis-horizontal-sharp" class="nav__icon"></ion-icon>
-                    <span class="nav_name">myInfo</span>
-                </a>
                 <a href="#" name='clickNotice' class="nav__link">
                     <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">SNS</span>
@@ -61,7 +57,12 @@
                     <span class="nav_name">notice</span>
                 </a>
                 
+                <!-- 로그인 상태에서만 보이도록 설정 -->
                	<c:if test="${not empty member}">
+               		<a href="#" id='clickMyInfo' name='clickMyInfo' class="nav__link">
+	                    <ion-icon name="ellipsis-horizontal-sharp" class="nav__icon"></ion-icon>
+	                    <span class="nav_name">myInfo</span>
+	                </a>
                		<a href="#" class="nav__link">
 	                    <ion-icon name="cart-outline" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">cart</span>
