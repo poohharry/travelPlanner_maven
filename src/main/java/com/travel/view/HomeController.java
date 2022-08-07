@@ -13,7 +13,7 @@ import com.travel.biz.member.MemberVO;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/home.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/home.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public String home(HttpSession session, Model model, MemberVO vo) {
 		
 //		vo = (MemberVO)session.getAttribute("member");

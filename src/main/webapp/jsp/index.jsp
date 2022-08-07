@@ -19,22 +19,23 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/home.css">
    	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css">
+   	
 </head>
 <body id="body-pd">
 
 
 <container>
+<div style="width:25vw; height:100vh; float: left; z-index: 10; background-color: rgba(0, 0, 0, 0.3);">
+	<h1 style="font-size: 2.5em; margin-top: 5vh; text-align: center; color: white;">Travel Planner</h1>
+	<h3 style="text-align: center; color: white; margin-top: 5vh;">Make Your Own Plan</h3>
+</div>
+<img style="width:98.8vw; height: 100vh; position: absolute; top:0; left:0; z-index: -5;" alt="" src="${pageContext.request.contextPath}/images/main1_1920.jpg">
 <!-- 사이드바 -->
 <jsp:include page="../commonJSP/sideBar.jsp"/>
 
-
-
     <main>
-
         <!-- 콘텐츠 -->
-        <div class="board_wrap">
-
-
+        <div class="board_wrap" style="clear: left; margin-top: 3vh;">
             <!-- 강의 목록 -->
             <div class="board_first">
                 <table class="table table-hover">
@@ -100,16 +101,11 @@
                     </tr>
                     </thead>
                     <tbody>
-<%-- 	                   	<c:forEach items="${noticeList}" var="notice">
-		                    <tr>
-		                     <td><a href="getBoard.do?seq=${notice.seq }&table=commonnotice">${notice.title }</a></td>
-		                     <td>${notice.writeDate }</td>
-		                    </tr>
-	                    </c:forEach> --%>
+                    
                     </tbody>
                 </table>
             </div><!--  학사 공지 끝 -->
-
+		</div>
     </main><!--  콘텐츠 끝  -->
     
 </container>

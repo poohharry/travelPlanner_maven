@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+	<resultMap id="boardResult" type="board">
+        <id property="seq" column="seq" />
+        <result property="title" column="title" />
+        <result property="writer" column="writer" />
+        <result property="viewCnt" column="viewCnt" />
+        <result property="content" column="content" />
+        <result property="fileName" column="fileName" />
+        <result property="fileSize" column="fileSize" />
+        <result property="writeDate" column="writeDate" />
+        <result property="updateDate" column="updateDate" />
+        <result property="originalFileName" column="originalFileName" />
+        <result property="subjectCode" column="subjectCode" />
+	</resultMap>
+
+
+	<!-- 게시판 글 작성 sql문 -->
+	<insert id="insertBoard" parameterType="board">
+		<![CDATA[
+		INSERT INTO ${table}(title, writer, content, fileName, fileSize, originalFileName, subjectCode)
+		VALUES(#{title}, #{writer}, #{content}, #{fileName}, #{fileSize}, #{originalFileName}, #{subjectCode})
+		]]>
+	</insert>
+	
+	<!-- 파일은 수정하지 못하도록 할 예정 
+		수정 날짜는 트리거를 활용할 예정 -->
+	<update id="updateBoard">
+		<![CDATA[
+		UPDATE ${table} SET
+		title = #{title},
+		content = #{content},
+		fileName = #{fileName},
+		fileSize = #{fileSize},
+		originalFileName = #{originalFileName},
+		updateDate = current_timestamp
+		WHERE seq = #{seq}
+		]]>
+	</update>
+
+	<delete id="deleteBoard">
+		<![CDATA[
+		DELETE from ${table} 
+		WHERE seq = #{seq}
+		]]>
+	</delete>
+
+	<select id="getBoard" resultType="board">
+		<![CDATA[
+		SELECT *
+		FROM ${table}
+		WHERE seq = #{seq}
+		]]>
+	</select>
+
+	<select id="getBoardList" resultMap="boardResult">
+		<![CDATA[
+		SELECT *
+		FROM ${table}
+		where subjectCode = #{subjectCode} ORDER BY writeDate DESC
+		]]>
+	</select>
+
+</mapper>

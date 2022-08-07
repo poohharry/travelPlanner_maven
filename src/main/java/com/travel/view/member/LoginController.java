@@ -22,11 +22,11 @@ public class LoginController {
 	@RequestMapping(value="/login.do",method=RequestMethod.GET)
 	public String loginView() {
 		System.out.println("loginpage");
-		return "/jsp/index.jsp";
+		return "/jsp/login.jsp";
 	}
 	
 	@RequestMapping(value="/login.do",method=RequestMethod.POST)
-	public String login(@RequestParam String id,@RequestParam String pw,MemberVO vo, 
+	public String login(@RequestParam String id,@RequestParam String pw, MemberVO vo, 
 			HttpSession session, Model model) { //servlet api
 		System.out.println(id);
 		if(id==null || id.equals("")) {
