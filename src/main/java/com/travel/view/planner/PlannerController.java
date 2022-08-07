@@ -20,7 +20,9 @@ public class PlannerController {
 	
 	// 장바구니에 추가
 	@RequestMapping(value = "/insertItem.do")
-	public String insertItem(ItemVO vo) {
+	public String insertItem(ItemVO vo, HttpSession session) {
+		MemberVO member = (MemberVO) session.getAttribute("member");
+		vo.setMemberId(member.getId());
 		itemService.insertItem(vo);
 		System.out.println("장바구니 추가 완료");
 		return "/jsp/planner.jsp";
@@ -29,14 +31,9 @@ public class PlannerController {
 	// 장바구니 삭제
 	@RequestMapping(value = "/deleteItem.do")
 	public String deleteItem(Model model, ItemVO vo, HttpSession session) {
-		MemberVO member = (MemberVO) session.getAttribute("member");
-		vo.setMemberId(member.getId());
-		
-		// 선 삭제 (삭제하는 url에 쿼리로 seq를 던져 줄 예정이고 그 seq를 통해서 해당 아이템을 삭제)
 		itemService.deleteItem(vo);
-		// 후 조회 (세션에서 받아온 유저의 정보중 id를 통해 장바구니 조회)
-		model.addAttribute("itemList", itemService.getItemList(vo));
-		return "cart.do";
+		// 삭제가 무사히 완료됐으니 장바구니 호출
+		return "/getItemList.do";
 	}
 	
 	// 장바구니 전체 조회
@@ -45,13 +42,9 @@ public class PlannerController {
 		MemberVO member = (MemberVO) session.getAttribute("member");
 		vo.setMemberId(member.getId());
 		model.addAttribute("itemList", itemService.getItemList(vo));
-		return "cart.do";
+		return "/jsp/cart.jsp";
 	}
-	
-	@RequestMapping(value = "/search.do")
-	public void search(String keyWord) {
-		System.out.println(keyWord);
-	}
+
 
 }
 

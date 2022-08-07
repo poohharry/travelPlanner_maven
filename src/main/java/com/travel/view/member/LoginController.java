@@ -21,19 +21,16 @@ public class LoginController {
 	
 	@RequestMapping(value="/login.do",method=RequestMethod.GET)
 	public String loginView() {
-		System.out.println("loginpage");
 		return "/jsp/login.jsp";
 	}
 	
 	@RequestMapping(value="/login.do",method=RequestMethod.POST)
 	public String login(@RequestParam String id,@RequestParam String pw, MemberVO vo, 
 			HttpSession session, Model model) { //servlet api
-		System.out.println(id);
 		if(id==null || id.equals("")) {
 			throw new IllegalArgumentException("아이디 필수");
 		}
 		vo.setId(id);
-		System.out.println(vo.getId());
 		vo.setPw(pw);
 		MemberVO member = memberService.login(vo);
 

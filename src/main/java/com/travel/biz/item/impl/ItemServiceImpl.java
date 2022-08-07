@@ -16,26 +16,24 @@ public class ItemServiceImpl implements ItemService{
 	
 	@Override
 	public void insertItem(ItemVO vo) {
-		// TODO Auto-generated method stub
+		itemDAO.insertItem(vo);
 		
 	}
 
 	@Override
 	public ItemVO getItem(ItemVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		return itemDAO.getItem(vo);
 	}
 
 	@Override
 	public void deleteItem(ItemVO vo) {
-		// TODO Auto-generated method stub
+		itemDAO.deleteItem(vo);
 		
 	}
 
 	@Override
 	public List<ItemVO> getItemList(ItemVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		return itemDAO.getItemList(vo);
 	}
 	
 }

@@ -15,22 +15,22 @@ public class ItemDAO {
 	
 	
 	public void insertItem(ItemVO vo) {
-		System.out.println("장바구니에 추가");
+		System.out.println("DAO : 장바구니에 추가");
 		mybatis.insert("ItemDAO.insertItem", vo);
 	}
 	
 	public void deleteItem(ItemVO vo) {
-		System.out.println("장바구니 삭제");
+		System.out.println("DAO : 장바구니 삭제");
 		mybatis.delete("ItemDAO.deleteItem", vo);
 	}
 	
-	public ItemVO getBoard(ItemVO vo) {
-		System.out.println("장바구니에 등록된 아이템 1개 출력");
+	public ItemVO getItem(ItemVO vo) {
+		System.out.println("DAO : 장바구니에 등록된 아이템 1개 출력");
 		return (ItemVO) mybatis.selectOne("ItemDAO.getItem", vo);
 	}
 	
-	public List<ItemVO> getBoardList(ItemVO vo) {
-		System.out.println("장바구니 리스트 출력");
+	public List<ItemVO> getItemList(ItemVO vo) {
+		System.out.println("DAO : 장바구니 리스트 출력");
 		return mybatis.selectList("ItemDAO.getItemList", vo);
 	}
 }

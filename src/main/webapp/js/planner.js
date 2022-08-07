@@ -132,7 +132,8 @@ function getListItem(index, places) {
     var el = document.createElement('li'),
     itemStr = '<span class="markerbg marker_' + (index+1) + '"></span>' +
                 '<div class="info">' +
-                "   <a href='#' title='클릭하여 장바구니에 담기'>" + places.place_name + "</a>";
+                "   <a href='/insertItem.do?name=" + places.place_name + "&address=" + places.address_name + 
+                "&tel="+places.phone +"' title='클릭하여 장바구니에 담기'>" + places.place_name + "</a>";
 
     if (places.road_address_name) {
         itemStr += '    <span>' + places.road_address_name + '</span>' +

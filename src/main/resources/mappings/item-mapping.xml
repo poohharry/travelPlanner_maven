@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ItemDAO">
+	<resultMap id="itemResult" type="item">
+        <id property="seq" column="seq" />
+        <result property="memberId" column="memberId" />
+        <result property="name" column="name" />
+        <result property="address" column="address" />
+        <result property="tel" column="tel" />
+	</resultMap>
+	
+	<!-- 장바구니 추가 -->
+	<insert id="insertItem" parameterType="item">
+		<![CDATA[
+		INSERT INTO items(memberId, name, address, tel)
+		VALUES(#{memberId}, #{name}, #{address}, #{tel})
+		]]>
+	</insert>
+	
+	<!-- 장바구니 삭제 -->
+	<delete id="deleteItem">
+		<![CDATA[
+		DELETE from items 
+		WHERE seq = #{seq}
+		]]>
+	</delete>
+	
+	<!-- 장바구니 조회 -->
+	<select id="getItemList" resultMap="itemResult">
+		<![CDATA[
+		SELECT *
+		FROM items
+		where memberId = #{memberId} ORDER BY seq DESC
+		]]>
+	</select>
+
+</mapper>
