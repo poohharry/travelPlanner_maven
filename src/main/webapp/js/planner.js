@@ -1,3 +1,12 @@
+// 키워드 초기값 설정
+let key = sessionStorage.getItem('keyWord');
+console.log(key);
+if(!key) {
+    key = '제주도';
+}
+document.getElementById('keyword').value = key;
+
+
 // 마커를 담을 배열입니다
 var markers = [];
 
@@ -28,6 +37,8 @@ function searchPlaces() {
         alert('키워드를 입력해주세요!');
         return false;
     }
+
+    sessionStorage.setItem('keyWord', keyword);
 
     // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
     ps.keywordSearch( keyword, placesSearchCB); 
