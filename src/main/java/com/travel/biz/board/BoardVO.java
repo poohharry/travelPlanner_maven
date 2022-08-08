@@ -14,5 +14,6 @@ public class BoardVO {
 	private String writeDate;			// 작성 날짜
 	private String updateDate;			// 수정 날짜
 	private String originalFileName;	// 수정 시 기존 업로드 파일 이름
+	private String table;				// 어느 테이블을 조회할 것인지
 	
 }

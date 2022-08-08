@@ -14,7 +14,6 @@
         <result property="writeDate" column="writeDate" />
         <result property="updateDate" column="updateDate" />
         <result property="originalFileName" column="originalFileName" />
-        <result property="subjectCode" column="subjectCode" />
 	</resultMap>
 
 
@@ -60,7 +59,7 @@
 		<![CDATA[
 		SELECT *
 		FROM ${table}
-		where subjectCode = #{subjectCode} ORDER BY writeDate DESC
+		ORDER BY writeDate DESC
 		]]>
 	</select>
 

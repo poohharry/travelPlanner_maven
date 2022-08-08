@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>MyInfo</title>
 </head>
-<body>
+<body id="body-pd">
 
 </body>
 </html>

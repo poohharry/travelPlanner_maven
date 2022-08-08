@@ -33,7 +33,7 @@
 .listWrap{
     width: 80rem;
     height: 40rem;
-    margin: 25px auto;
+    margin: 0 auto 25px auto;
 }
 
 .listWrap a{
@@ -42,7 +42,7 @@
 }
 
 .list{
-    padding: 5px;
+    padding: 25px 5px 5px 5px;
     height: 7rem;
     width: 50rem;
     margin: 0 auto;

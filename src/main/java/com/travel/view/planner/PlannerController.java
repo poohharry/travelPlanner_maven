@@ -24,11 +24,14 @@ public class PlannerController {
 	@ResponseBody
 	public String insertItem(ItemVO vo, HttpSession session) {
 		MemberVO member = (MemberVO) session.getAttribute("member");
+		if(member==null) {
+			return "<script> alert('로그인 이후 사용할 수 있습니다'); location.href='/login.do'</script>";
+		}
 		vo.setMemberId(member.getId());
 		itemService.insertItem(vo);
 		System.out.println("장바구니 추가 완료");
 
-		String returnMsg= "<script>alert('"+ vo.getName() +"을(를) 장바구니에 담았습니다'); location.href='/planner.do'</script>"; 
+		String returnMsg= "<script>alert('"+ vo.getName() +"을(를) 장바구니에 담았습니다.\\n cart 페이지에서 확인해주세요.'); location.href='/planner.do'</script>"; 
 
 		return returnMsg;
 	}
@@ -45,6 +48,9 @@ public class PlannerController {
 	@RequestMapping(value = "/getItemList.do")
 	public String getItemList(Model model, ItemVO vo, HttpSession session) {
 		MemberVO member = (MemberVO) session.getAttribute("member");
+		if(member==null) {
+			return "<script> alert('로그인 이후 사용할 수 있습니다'); location.href='/login.do'</script>";
+		}
 		vo.setMemberId(member.getId());
 		model.addAttribute("itemList", itemService.getItemList(vo));
 		return "/jsp/cart.jsp";

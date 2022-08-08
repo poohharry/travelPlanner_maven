@@ -8,8 +8,6 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 	<!-- 제이쿼리 CDN -->
-	   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
        
 	<script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
@@ -63,7 +61,7 @@
 	                    <ion-icon name="ellipsis-horizontal-sharp" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">myInfo</span>
 	                </a>
-               		<a href="#" class="nav__link">
+               		<a href="/getItemList.do" class="nav__link">
 	                    <ion-icon name="cart-outline" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">cart</span>
 	                </a>
