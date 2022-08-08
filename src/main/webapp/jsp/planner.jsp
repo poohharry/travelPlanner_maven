@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>planner</title>
+<title>Planner</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/planner.css">
 </head>
 <body id="body-pd">

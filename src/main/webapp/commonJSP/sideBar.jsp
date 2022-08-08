@@ -44,7 +44,7 @@
                     <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">main</span>
                 </a>
-                <a href="/jsp/planner.jsp" id='clickSubject' name='clicksubject' class="nav__link">
+                <a href="/planner.do" id='clickSubject' name='clicksubject' class="nav__link">
                     <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">planner</span>
                 </a>

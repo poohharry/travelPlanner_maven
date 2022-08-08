@@ -110,9 +110,5 @@
     
 </container>
 
-<!-- JS -->
-<script src="${pageContext.request.contextPath}/js/index.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-
 </body>
 </html>
