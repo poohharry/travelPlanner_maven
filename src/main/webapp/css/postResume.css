@@ -1,0 +1,433 @@
+@charset "UTF-8";
+@font-face{
+	src:url("../fonts/KoddiUDOnGothic-Regular.ttf");
+	font-family:KoddiRegular;
+}
+@font-face{
+	src:url("../fonts/KoddiUDOnGothic-Bold.ttf");
+	font-family:KoddiBold;
+}
+@font-face{
+	src:url("../fonts/BinggraeⅡ.ttf");
+	font-family:Binggrae;
+}
+
+main section {
+	flex-basis: 40%;
+	font-family:KoddiRegular;
+	letter-spacing:0.1em;
+}
+.div-profileImage{
+	margin : 0 auto;
+	border : 2px solid black;
+	width : 150px;
+	height : 200px;
+	position:relative;
+}
+
+#fileUpload{
+	position:absolute;
+    left: 0;
+    top:0;
+    width:150px;
+    height:200px;
+    background-color: transparent;
+    z-index: 20;
+    color: transparent;
+    box-sizing:border-box;
+}
+form[name="resumeFrm"] input::-webkit-file-upload-button{
+    display: none;
+}
+.resume-img {
+	width: 150px;
+	height: 200px;
+	background-color:#eee;
+}
+.file-help{
+	position:absolute;
+	width: 150px;
+	height: 200px;
+	top:0;
+	left:0;
+	vertical-align:middle;
+}
+
+.fileLabel{
+	position:absolute;
+	z-index:-10;
+	width: 150px;
+	height: 200px;
+	top:0;
+	left:0;
+	vertical-align:middle;
+	transition-duration:0.3s;
+}
+.fileLabel img{
+	display:inline-block;
+	width: 70px;
+	height: 70px;
+	margin-top:50px;
+}
+.fileLabel span, .file-help span{
+	font-weight:bold;
+}
+.file-help span{
+	display:inline-block;
+	font-size:13px;
+	margin:0;
+	margin-top:80px;
+	white-space:pre-line;
+}
+
+.div-profileImage:hover .fileLabel{
+	z-index:10;
+	background-color:rgba(220,220,220,0.8);
+	transition-duration:0.3s;
+}
+td{
+	position:relative;
+}
+td ul{
+	text-align:center;
+	padding-inline-start: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+td ul li{
+	display:inline-block;
+	text-align:center;
+	list-style:none;
+}
+td textarea{
+	resize:vertical;
+	font-family:KoddiRegular;
+	background-image:url("../image/edit3.svg");
+	background-repeat:no-repeat;
+	background-position:98%;
+	background-size:28px;
+	width:75%;
+	min-height:45px;
+	margin:0;
+	border:none;
+	padding-left:10px;
+	padding-right:30px;
+	font-size:18px;
+}
+html.godabiON td textarea{
+	background-image:url("../image/edit3_w.svg");
+}
+#table td textarea{
+	width:85%;
+}
+#mytable3 td textarea{
+	width:70%;
+}
+#table .tr7 td textarea, #table .tr8 td textarea{
+	width:70%;
+	float:right;
+}
+#table .tr7 td span, #table .tr8 td span{
+	display:inline-block;
+	position:absolute;
+	left:5px;
+	top:15px;
+	font-weight:bold;
+}
+table, tr, td {
+	border: 1px solid #28587D;
+	border-collapse: collapse;
+}
+#table td{
+	text-align:center;
+}
+
+table {
+	margin-top: -1px;
+	height: 350px;
+	border-style: hidden;
+}
+
+table:not(table:last-of-type) {
+	border-bottom: 2px solid #28587D;
+}
+
+.div-table {
+	border: 1px solid #3778AB;
+	border-radius: 5px;
+	box-shadow: 0 0 8px #3778AB;
+	margin:auto;
+	width:fit-content;
+}
+
+.table2, .table3 {
+	height: 170px;
+}
+
+table {
+	width: 815px;
+}
+
+table th {
+	color: white;
+	background-color: #3778AB;
+	letter-spacing:0.5em;
+	white-space:pre-line;
+}
+
+table .tr1 a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+    text-decoration-line: none;
+    color: black;
+    background-color: gray;
+    cursor : pointer;
+}
+
+
+table .tr1 th:nth-of-type(2) {
+	width: 115px;
+
+}
+#table .tr4,#table .tr6{
+	border-bottom:3px double #28587D;
+}
+html.godabiON #table .tr4,#table .tr6{
+	border-bottom:3px double white;
+}
+table .tr2 th{
+	width: 100px;
+}
+
+table .tr1 td {
+	width: 120px;
+}
+
+table .tr5 th {
+	height: 40px;
+}
+
+table .tr6 th {
+	height: 40px;
+}
+
+table .tr6 th:last-of-type {
+	width: 100px;
+}
+
+table .tr6 td:last-of-type {
+	width: 230px;
+}
+
+
+table .tr7 td, .tr8 td {
+	height: 40px;
+}
+
+
+table .tr7 input[type=radio], .tr7 label {
+	height: 10px;
+	width: 10px;
+}
+
+table .tr10 th, .tr15 th {
+	border-left: 1px solid #28587D;	
+	white-space:pre-line;
+}
+
+table .tr10 td:last-of-type {
+	width: 100px;
+}
+
+table .tr10 th:first-of-type {
+	width: 130px;
+}
+
+table .tr10 th:not(.tr10 th:first-of-type, .tr10 th:last-of-type) {
+	height: 70px;
+	width: 170px;
+}
+
+table .tr14 th {
+	width: 150px;
+}
+
+table .tr15 th {
+	width: 150px;
+}
+
+table .tr15 th {
+	height: 70px;
+}
+
+table .tr11 td, .tr12 td, .tr13 td {
+	height: 40px;
+}
+
+table .tr16 td, .tr17 td, .tr18 td {
+	height: 40px;
+}
+
+
+
+table caption {
+	font-size: 30px;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	font-weight: bold;
+}
+
+.div-caption {
+	position: relative;
+	left: 40%;
+}
+
+.div-caption img:first-of-type {
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+.div-caption p {
+	width: 175px;
+}
+
+#profileImage{
+	background-color : gray;
+}
+
+.div-title label {
+	font-size: 20px;
+	font-weight: bold;
+	display: block;
+}
+
+.div-title input {
+	width: 810px;
+	height: 50px;
+	margin-top: 20px;
+	border-radius: 5px;
+	font-size:18px;
+}
+
+.div-title {
+	text-align:center;
+	margin-bottom: 30px;
+} 
+
+#container{
+	flex-basis: 42%;
+	position:relative;
+}
+#sideNav{	
+	float:left;
+	border:1px solid #000;
+	border-radius:5px;
+	width:250px;
+	height:420px;
+	position:fixed;
+	top:40%;
+	margin-left:20px;
+	box-shadow:2px 2px 5px #666;
+}
+
+#sideNav ul {
+	margin-top: 10px;
+}
+
+#sideNav ul li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+#sideNav ul li a {
+	color: #004C6A;
+	font-family:Binggrae;
+	font-size: 20px;
+	text-decoration:none;
+}
+
+#sideNav ul li img {
+	width: 30px;
+	height: 30px;
+	
+}
+
+#sideNav img {
+	width: 30px;
+	height: 30px;
+}
+
+.div-sideNav {
+	position : absolute;
+	right : 0px;
+}
+
+#sideNav h3 {
+	font-family:Binggrae;
+	margin-left: 20px;
+	color: #666;
+	margin-right: 30px;
+}
+
+.side-button {
+	text-align:center;
+}
+
+.side-button a {
+	font-family:Binggrae;
+	border: 1px solid #aaa;
+	text-decoration: none;
+	color: white;
+	padding: 7px 7px 7px 7px;
+	display: inline-block;
+	width: 150px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight:bold;
+	font-size:18px;
+	text-shadow:0 0 10px #000;
+	border-radius:2px;
+}
+#saveRes{
+	background-color: #2396B0;
+	margin-top:20px;
+}
+html.godabiON .div-caption img{
+	content: url("../image/resume_w.svg");
+}
+html.godabiON #sideNav ul li:nth-child(1) img {
+	content: url("../image/account_w.svg");
+}
+html.godabiON #sideNav ul li:nth-child(2) img {
+	content: url("../image/write_res_w.svg");
+}
+html.godabiON #sideNav ul li:nth-child(3) img {
+	content: url("../image/resume_w.svg");
+}
+html.godabiON #sideNav ul li:nth-child(4) img {
+	content: url("../image/bookmark_on_w.svg");
+}
+html.godabiON #sideNav ul li:nth-child(5) img {
+	content: url("../image/list_w.svg");
+}
+html.godabiON #sideNav{
+	border: 1px solid #eee;
+}
+html.godabiON #sideNav h3{
+	color: #aaa;
+}
+html.godabiON th{
+	background-color: transparent;
+	border:2px solid #fff;
+}
+html.godabiON table,html.godabiON tr,html.godabiON td{
+	border:1px solid #fff;
+}
+html.godabiON .div-table {
+	border: 1px solid #fff;
+	box-shadow: none;
+}
+html.godabiON #saveRes {
+	border: 2px solid #71D0BD;
+}

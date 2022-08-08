@@ -28,8 +28,8 @@ public class MemberController {
 	@RequestMapping(value = "/insertMember.do", method = {RequestMethod.GET, RequestMethod.POST})
 	public String insertMember(MemberVO vo, @RequestParam MultipartFile uploadFile) 
 			throws IOException {
-		
-		final String SAVEFOLDER = "";
+		System.out.println("insertMember 진입 성공");
+		final String SAVEFOLDER = "C://upload/";
 		
 		// 파일 업로드 처리
 		if (!uploadFile.isEmpty()) {
@@ -53,8 +53,9 @@ public class MemberController {
 			
 			uploadFile.transferTo(new File(SAVEFOLDER + newFileName));
 		}
-		
+		System.out.println("파일 업로드 성공");
 		memberService.insertMember(vo);
+		System.out.println("최종적으로 가입 성공");
 		
 		return "/login.do";
 	}

@@ -13,7 +13,7 @@
 	<!-- 사이드바 -->
 	<jsp:include page="../commonJSP/sideBar.jsp"/>
 	
-	<main class="form-signin">
+	<main class="form-signin" style="margin-top: 25px;">
 		<form action="/login.do" method="post" name='loginForm'>
 			<h1 class="h3 mb-3 fw-normal" style="text-align:center;">로그인</h1>
 			

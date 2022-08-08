@@ -50,6 +50,7 @@ public class PlannerController {
 		return "/jsp/cart.jsp";
 	}
 	
+	// 플래너 페이지로 이동(로그인 상태 체크)
 	@RequestMapping(value = "/planner.do",produces="text/html;charset=UTF-8")
 	@ResponseBody
 	public String planner(HttpSession session) {

@@ -13,14 +13,15 @@
 		<result property="signupDate" column="signupDate" />
 		<result property="proImgName" column="proImgName" />
 		<result property="proImgSize" column="proImgSize" />
+		<result property="originalImgName" column="originalImgName" />
 		
 	</resultMap>
 	
 	
 	<insert id="insertMember" parameterType="member">
 		<![CDATA[
-		INSERT INTO members(id, pw, name, email, mobile, proImgName, proImgSize)
-		VALUES(#{id}, #{pw}, #{name}, #{email}, #{mobile}, #{proImgName}, #proImgSize})
+		INSERT INTO members(id, pw, name, email, mobile, proImgName, proImgSize, originalImgName)
+		VALUES(#{id}, #{pw}, #{name}, #{email}, #{mobile}, #{proImgName}, #{proImgSize}, #{originalImgName})
 		]]>
 	</insert>
 	

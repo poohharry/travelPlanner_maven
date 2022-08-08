@@ -1,1 +1,9 @@
 @charset "UTF-8";
+
+input, select, option{
+	letter-spacing:0.1em;
+}
+
+form input::file-selector-button {
+	display: none;
+}
