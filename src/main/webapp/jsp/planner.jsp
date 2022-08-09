@@ -83,6 +83,14 @@ function add(name) {
 
   scheduleDay.innerHTML = scheduleStr;
 
+  
+  // 같은 날짜에 중복 입력을 막기 위해 넣었던 일차는 display none으로 가리기
+  
+  
+}
+
+function chk() {
+	
 }
 </script>
 
@@ -94,10 +102,15 @@ function add(name) {
 <!-- 스케쥴 -->
 <!-- 최대 기간은 7일로 제한할 예정 -->
 <div style="float:left; width: 12vw; height:100vh; background-color: lightgray; margin-top:0;">
-	<input type="text" name="daterange" value="08/12/2022 - 08/15/2022" style="width: 10vw; margin: 25px 0 0 1vw;"/>
-	<div id="scheduleList">
-		
-	</div>
+	<form name="scheduleForm" method="post" action="savePlanner.do">
+		<input type="text" name="daterange" value="08/12/2022 - 08/15/2022" style="width: 10vw; margin: 25px 0 0 1vw;"/>
+		<div id="scheduleList">
+			
+		</div>
+		<div>
+			<input type="submit" onclick="chk" value="플래너 저장">
+		</div>	
+	</form>
 </div>
 
 
