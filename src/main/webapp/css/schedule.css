@@ -15,4 +15,7 @@
 	min-height: 120px;
 }
 
-.
+.scheduleItem {
+	border: 0px;
+	background-color: transparent;
+}

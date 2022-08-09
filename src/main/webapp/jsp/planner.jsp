@@ -81,7 +81,7 @@ function add(name) {
   // 전에 담겨있던 아이템을 가져옴
   let scheduleStr = scheduleDay.innerHTML;
 
-  scheduleStr += "<div>" + name + "</div>";
+  scheduleStr += "<input class='scheduleItem' readonly value='" + name + "' disabled></input>";
 
   scheduleDay.innerHTML = scheduleStr;
 
