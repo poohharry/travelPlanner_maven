@@ -16,13 +16,17 @@ $(function() {
       
       const day = Math.ceil(getDateDiff(start, end));
       console.log('두 날짜의 차이 : ' + day);
-      
+      console.log("start : " + start);
      // n일 차 스케줄 박스 생성
       let scheduleBox = "";  
       for(let i = 1; i <= day; i++) {
+        
+        // let date = new date(start);
+        // let currentDate = 
+        // date.setDate(date.getDate() + (i-1));
           scheduleBox += 
               "<div class='schedule'>" + 
-                  "<span>" + i + "일 차</span>" + 
+                  "<span>" + i + "일 차 (" + date + ")</span>" + 
                   "<div id='day" + i +"'>" + 
                   "</div>" +
               "</div>";

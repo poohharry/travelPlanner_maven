@@ -36,12 +36,14 @@ $(function() {
       const day = Math.ceil(getDateDiff(start, end));
       console.log('두 날짜의 차이 : ' + day);
       
-     // n일 차 스케줄 박스 생성
+   		// n일 차 스케줄 박스 생성
       let scheduleBox = "";  
       for(let i = 1; i <= day; i++) {
+        let date = new Date(start);
+        date.setDate(date.getDate() + (i-1));
           scheduleBox += 
               "<div class='schedule'>" + 
-                  "<span>" + i + "일 차</span>" + 
+                  "<span>" + i + "일 차 (" + date.toLocaleDateString() + ")</span>" + 
                   "<div id='day" + i +"'>" + 
                   "</div>" +
               "</div>";
@@ -92,6 +94,9 @@ function add(name) {
 function chk() {
 	
 }
+function reset() {
+	
+}
 </script>
 
 </head>
@@ -108,7 +113,8 @@ function chk() {
 			
 		</div>
 		<div>
-			<input type="submit" onclick="chk" value="플래너 저장">
+			<input type="submit" onclick="chk()" value="플래너 저장">
+			<input type="button" onclick="reset()" value="플래너 리셋">
 		</div>	
 	</form>
 </div>
