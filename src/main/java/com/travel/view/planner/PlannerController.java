@@ -31,7 +31,7 @@ public class PlannerController {
 		itemService.insertItem(vo);
 		System.out.println("장바구니 추가 완료");
 
-		String returnMsg= "<script>alert('"+ vo.getName() +"을(를) 장바구니에 담았습니다.\\n cart 페이지에서 확인해주세요.'); location.href='/planner.do'</script>"; 
+		String returnMsg= "<script>alert('"+ vo.getName() +"을(를) 장바구니에 담았습니다.\\ncart 페이지에서 확인해주세요.'); location.href='/map.do'</script>"; 
 
 		return returnMsg;
 	}
@@ -53,14 +53,14 @@ public class PlannerController {
 		}
 		vo.setMemberId(member.getId());
 		model.addAttribute("itemList", itemService.getItemList(vo));
-		return "/jsp/cart.jsp";
+		return "/jsp/planner.jsp";
 	}
 	
-	// 플래너 페이지로 이동(로그인 상태 체크)
-	@RequestMapping(value = "/planner.do",produces="text/html;charset=UTF-8")
+	// 지도 페이지로 이동(로그인 상태 체크)
+	@RequestMapping(value = "/map.do",produces="text/html;charset=UTF-8")
 	@ResponseBody
 	public String planner(HttpSession session) {
-		String returnURL = "<script> location.href='/jsp/planner.jsp'</script>";
+		String returnURL = "<script> location.href='/jsp/map.jsp'</script>";
 		MemberVO member = (MemberVO) session.getAttribute("member");
 		if(member==null) {
 			return "<script> alert('로그인 이후 사용할 수 있습니다'); location.href='/login.do'</script>";

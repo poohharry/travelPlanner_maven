@@ -42,9 +42,9 @@
                     <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                     <span class="nav_name">main</span>
                 </a>
-                <a href="/planner.do" id='clickSubject' name='clicksubject' class="nav__link">
-                    <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
-                    <span class="nav_name">planner</span>
+                <a href="/map.do" id='clickSubject' name='clicksubject' class="nav__link">
+                    <ion-icon name="map-outline" class="nav__icon"></ion-icon>
+                    <span class="nav_name">map</span>
                 </a>
                 <a href="#" name='clickNotice' class="nav__link">
                     <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
@@ -57,13 +57,13 @@
                 
                 <!-- 로그인 상태에서만 보이도록 설정 -->
                	<c:if test="${not empty member}">
+               		<a href="/getItemList.do" class="nav__link">
+	                    <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+	                    <span class="nav_name">planner</span>
+	                </a>
                		<a href="#" id='clickMyInfo' name='clickMyInfo' class="nav__link">
 	                    <ion-icon name="ellipsis-horizontal-sharp" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">myInfo</span>
-	                </a>
-               		<a href="/getItemList.do" class="nav__link">
-	                    <ion-icon name="cart-outline" class="nav__icon"></ion-icon>
-	                    <span class="nav_name">cart</span>
 	                </a>
 	                <a href="/logout.do" class="nav__link">
 	                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>

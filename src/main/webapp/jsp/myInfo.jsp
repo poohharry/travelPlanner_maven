@@ -8,6 +8,6 @@
 <title>MyInfo</title>
 </head>
 <body id="body-pd">
-
+<jsp:include page="../commonJSP/sideBar.jsp"/>
 </body>
 </html>

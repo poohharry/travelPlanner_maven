@@ -17,7 +17,7 @@
 	<main class="form-signin" style="margin-top: 25px;">
 		<form action="/insertMember.do" method="post" name='resumeFrm' enctype="multipart/form-data">
 			<h1 class="h3 mb-3 fw-normal" style="text-align:center;">Sign Up</h1>
-			<h4 style="text-align: center;">profile image</h4>
+			<h4 style="text-align: center; margin-top:25px;">profile image</h4>
 			<div class="div-profileImage">				
 				<div class="file-help">
 					<span>파일을 끌어다 놓거나 
@@ -51,11 +51,6 @@
 			</div>
 			<button class="w-100 btn btn-lg btn-dark" value="login" type='submit'>Sign UP</button>
 		</form>
-		
-		<div style="text-align: center; margin-top: 10px;">
-			<span style="margin-right: 25px;"><a href="#">비밀번호 찾기</a></span>
-			<span><a href="#">회원가입</a></span>
-		</div>
 	</main>
 
 <script defer src="${pageContext.request.contextPath}/js/postResume.js"></script>
