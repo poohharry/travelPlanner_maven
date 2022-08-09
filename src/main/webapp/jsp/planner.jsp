@@ -43,7 +43,7 @@ $(function() {
         date.setDate(date.getDate() + (i-1));
           scheduleBox += 
               "<div class='schedule'>" + 
-                  "<span>" + i + "일 차 (" + date.toLocaleDateString() + ")</span>" + 
+                  "<span class='nDay'>" + i + "일 차 (" + date.toLocaleDateString() + ")</span>" + 
                   "<div id='day" + i +"'>" + 
                   "</div>" +
               "</div>";
@@ -91,10 +91,17 @@ function add(name) {
   
 }
 
-function chk() {
+function scheduleReset() {
+	document.getElementById('scheduleList').innerHTML = "";
+	document.getElementById('period').value = "08/12/2022 - 08/15/2022";
 	
-}
-function reset() {
+	// 스케줄 박스 생성에 따른 장바구니 아이템의 select태그 옵션 추가 생성
+    const selectDate = document.getElementsByClassName('selectDate')  // 컬렉션 형태로 리턴
+
+    // 각 아이템들의 select태그에 option추가
+    for(let i = 0; i < selectDate.length; i++) {
+      selectDate.item(i).innerHTML = "<option>여행기간을 먼저 선택해 주세요</option>";
+    }
 	
 }
 </script>
@@ -108,13 +115,13 @@ function reset() {
 <!-- 최대 기간은 7일로 제한할 예정 -->
 <div style="float:left; width: 12vw; height:100vh; background-color: lightgray; margin-top:0;">
 	<form name="scheduleForm" method="post" action="savePlanner.do">
-		<input type="text" name="daterange" value="08/12/2022 - 08/15/2022" style="width: 10vw; margin: 25px 0 0 1vw;"/>
+		<input id="period" type="text" name="daterange" value="08/12/2022 - 08/15/2022" style="width: 10vw; margin: 25px 0 0 1vw;"/>
 		<div id="scheduleList">
-			
+			<!-- 여행일정에 맞춰 n일 차 div박스가 생길 예정 -->
 		</div>
-		<div>
-			<input type="submit" onclick="chk()" value="플래너 저장">
-			<input type="button" onclick="reset()" value="플래너 리셋">
+		<div style="text-align: center;">
+			<input type="submit" value="플래너 저장" style="margin-right:10px;">
+			<input type="button" onclick="scheduleReset()" value="플래너 리셋">
 		</div>	
 	</form>
 </div>

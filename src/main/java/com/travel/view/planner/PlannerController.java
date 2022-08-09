@@ -68,6 +68,14 @@ public class PlannerController {
 		return returnURL;
 	}
 	
+	@RequestMapping(value = "/savePlan.do",produces="text/html;charset=UTF-8")
+	@ResponseBody
+	public String savePlan() {
+		
+		return "<script> alert('여행 플랜을 저장했습니다'); location.href='/home.do'</script>";
+	}
+	
+	
 	
 
 
