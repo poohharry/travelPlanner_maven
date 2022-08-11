@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="PlanDAO">
+	
+	<resultMap id="planResult" type="plan">
+		<id property="seq" column="seq" />
+		<result property="memberId" column="memberId" />
+		<result property="start" column="start" />
+		<result property="end" column="end" />
+		<result property="day1" column="day1" />
+		<result property="day2" column="day2" />
+		<result property="day3" column="day3" />
+		<result property="day4" column="day4" />
+		<result property="day5" column="day5" />
+		<result property="day6" column="day6" />
+		<result property="day7" column="day7" />
+		
+	</resultMap>
+	
+	<insert id="insertPlan" parameterType="plan">
+		<![CDATA[
+		INSERT INTO plans(memberId, start, end, day1, day2, day3, day4, day5, day6, day7)
+		VALUES(#{memberId}, #{start}, #{end}, #{day1}, #{day2}, #{day3}, #{day4}, #{day5}, #{day6}, #{day7})
+		]]>
+	</insert>
+	
+	<delete id="deletePlan">
+		<![CDATA[
+		DELETE from plans 
+		WHERE seq = #{seq}
+		]]>
+	</delete>
+	
+	<select id="getPlan" resultType="plan">
+		<![CDATA[
+		SELECT *
+		FROM plans
+		WHERE seq = #{seq}
+		]]>
+	</select>
+	
+	<select id="getPlanList" resultMap="planResult">
+		<![CDATA[
+		SELECT *
+		FROM plans
+		WHERE memberId = #{memberId}
+		]]>
+	</select>
+	
+	
+</mapper>

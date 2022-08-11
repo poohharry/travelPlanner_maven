@@ -8,6 +8,7 @@
 		<typeAlias alias="member" type="com.travel.biz.member.MemberVO" />
 		<typeAlias alias="board" type="com.travel.biz.board.BoardVO" />
 		<typeAlias alias="item" type="com.travel.biz.item.ItemVO" />
+		<typeAlias alias="plan" type="com.travel.biz.plan.PlanVO" />
 	</typeAliases>
 	
 	<!-- Sql Mapper 설정 -->
@@ -15,5 +16,6 @@
 		<mapper resource="mappings/member-mapping.xml" />
 		<mapper resource="mappings/board-mapping.xml" />
 		<mapper resource="mappings/item-mapping.xml" />
+		<mapper resource="mappings/plan-mapping.xml" />
 	</mappers>
 </configuration>

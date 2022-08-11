@@ -36,6 +36,16 @@ $(function() {
       const day = Math.ceil(getDateDiff(start, end));
       console.log('두 날짜의 차이 : ' + day);
       
+      // input hidden 생성
+      let startDate = start.format('YYYY-MM-DD');
+      let endDate = end.format('YYYY-MM-DD');
+
+      let dateStr = "<input type='hidden' name='start' value='" + startDate + "'>" +
+                    "<input type='hidden' name='end' value='" + endDate + "'>";
+
+      document.getElementById('formDate').innerHTML = dateStr;
+
+
    		// n일 차 스케줄 박스 생성
       let scheduleBox = "";  
       for(let i = 1; i <= day; i++) {
@@ -78,10 +88,14 @@ function add(name) {
   // 알맞은 일 차의 div을 들고온다 (버튼을 클릭해서 아이템을 담을 공간)
   const scheduleDay = document.getElementById('day' + day);
 
+  // input필드의 name값 결정(day1_name)
+  let nameTag = 'day' + day;
+
   // 전에 담겨있던 아이템을 가져옴
   let scheduleStr = scheduleDay.innerHTML;
 
-  scheduleStr += "<input class='scheduleItem' readonly value='" + name + "' disabled></input>";
+  scheduleStr += "<input class='scheduleItem' name='" + nameTag + "' readonly value='" + name + "' disabled>" +
+                  "<input type='hidden' name='" + nameTag + "' value='" + name + "'>";
 
   scheduleDay.innerHTML = scheduleStr;
 
@@ -114,11 +128,17 @@ function scheduleReset() {
 <!-- 스케쥴 -->
 <!-- 최대 기간은 7일로 제한할 예정 -->
 <div style="float:left; width: 12vw; height:100vh; background-color: lightgray; margin-top:0;">
-	<form name="scheduleForm" method="post" action="savePlanner.do">
+	<form name="scheduleForm" method="post" action="savePlan.do">
 		<input id="period" type="text" name="daterange" value="08/12/2022 - 08/15/2022" style="width: 10vw; margin: 25px 0 0 1vw;"/>
 		<div id="scheduleList">
 			<!-- 여행일정에 맞춰 n일 차 div박스가 생길 예정 -->
 		</div>
+		
+		<div id="formDate">
+			<!-- controller로 넘겨주기 위한 날짜 hidden값 -->
+		</div>
+		
+		<input type="hidden" name="memberId" value="${member.id}">
 		<div style="text-align: center;">
 			<input type="submit" value="플래너 저장" style="margin-right:10px;">
 			<input type="button" onclick="scheduleReset()" value="플래너 리셋">

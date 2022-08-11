@@ -8,13 +8,15 @@
         <result property="name" column="name" />
         <result property="address" column="address" />
         <result property="tel" column="tel" />
+        <result property="yCode" column="yCode" />
+        <result property="xCode" column="xCode" />
 	</resultMap>
 	
 	<!-- 장바구니 추가 -->
 	<insert id="insertItem" parameterType="item">
 		<![CDATA[
-		INSERT INTO items(memberId, name, address, tel)
-		VALUES(#{memberId}, #{name}, #{address}, #{tel})
+		INSERT INTO items(memberId, name, address, tel, yCode, xCode)
+		VALUES(#{memberId}, #{name}, #{address}, #{tel}, #{yCode}, #{xCode})
 		]]>
 	</insert>
 	

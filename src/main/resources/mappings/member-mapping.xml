@@ -63,7 +63,7 @@
 	
 	<select id="login" resultType="member">
 		<![CDATA[
-		SELECT Id, name
+		SELECT *
 		FROM members
 		WHERE id = #{id} AND pw = #{pw};
 		]]>

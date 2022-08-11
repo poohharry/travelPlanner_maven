@@ -9,4 +9,6 @@ public class ItemVO {
 	private String name;			// 장소 이름
 	private String address;			// 장소 주소
 	private String tel;				// 장소 전화번호
+	private double yCode;			// 위도
+	private double xCode;			// 경도
 }

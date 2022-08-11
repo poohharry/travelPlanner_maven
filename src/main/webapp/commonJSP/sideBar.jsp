@@ -61,7 +61,7 @@
 	                    <ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">planner</span>
 	                </a>
-               		<a href="#" id='clickMyInfo' name='clickMyInfo' class="nav__link">
+               		<a href="/jsp/myInfo.jsp" id='clickMyInfo' name='clickMyInfo' class="nav__link">
 	                    <ion-icon name="ellipsis-horizontal-sharp" class="nav__icon"></ion-icon>
 	                    <span class="nav_name">myInfo</span>
 	                </a>
