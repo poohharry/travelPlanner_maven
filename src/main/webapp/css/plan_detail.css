@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.nDayBox {
+	width:150px;
+	height:150px;
+	background-color: lightgray;
+	border:1px solid gray;
+	text-align: center;
+	line-height: 150px;
+	
+	
+	/* 드래그 방지 */
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+
+.nDayBox:hover{
+	opacity : 0.5;
+}
+

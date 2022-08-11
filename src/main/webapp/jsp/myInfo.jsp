@@ -13,8 +13,8 @@
 <body id="body-pd">
 <jsp:include page="../commonJSP/sideBar.jsp"/>
 	<main>		
-		<section class="section-table">
-			<div class="title-div">
+		<section class="section-table" style="width:1000px; margin:auto;">
+			<div class="title-div"">
 				<img src="${pageContext.request.contextPath}/images/account.svg" class="title-img">
 				<p>MyInfo</p>
 			</div>
@@ -61,8 +61,8 @@
 							<img src="/images/write_res.svg">
 							myPlans</a></li>
 						<li><a href="myResume.jsp" >
-							<img src="./image/resume.svg">
-							이력서 관리</a></li>
+							<img src="/images/resume.svg">
+							myPosts</a></li>
 						<li><a href="pickedList.jsp" >
 							<img src="image/bookmark_on.svg">
 							관심 채용공고</a></li>

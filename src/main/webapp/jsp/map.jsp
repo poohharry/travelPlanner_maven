@@ -26,8 +26,8 @@
 	        </div>
 	        <hr>
 	        <ul id="placesList"></ul>
-        <div id="pagination"></div>
-    </div>
+        	<div id="pagination"></div>
+    	</div>
 	</div>
 	
 <script src="${pageContext.request.contextPath}/js/planner.js"></script>

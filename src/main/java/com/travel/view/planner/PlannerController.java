@@ -93,6 +93,16 @@ public class PlannerController {
 		return "/jsp/myPlans.jsp";
 	}
 	
+	@RequestMapping(value = "/getPlan.do")
+	public String getPlan(PlanVO vo, Model model) {
+		System.out.println(vo.getSeq());
+		PlanVO plan = planService.getPlan(vo);
+		
+		System.out.println("day1 : " + plan.getDay1());
+		model.addAttribute("plan", plan);
+		return "/jsp/plan_detail.jsp";
+	}
+	
 
 
 }

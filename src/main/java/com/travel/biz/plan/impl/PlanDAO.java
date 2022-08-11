@@ -20,6 +20,8 @@ public class PlanDAO {
 	
 	public PlanVO getPlan(PlanVO vo) {
 		System.out.println("Mybatis getPlan");
+		System.out.println("Mybatis vo.getSeq() -> " + vo.getSeq());
+		
 		return (PlanVO)mybatis.selectOne("PlanDAO.getPlan", vo);
 	}
 	
